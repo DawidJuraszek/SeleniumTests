@@ -1,0 +1,33 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import java.util.List;
+
+public class SelectorTest {
+
+    @Test
+    public void findElements() {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
+
+        By buttonId = By.id("clickOnMe");
+        WebElement clickOnMeButton = driver.findElement(buttonId);
+
+        By firstName = By.name("fname");
+        WebElement firstname = driver.findElement(By.name("fname"));
+
+        By paraHidden = By.className("topSecret");
+        driver.findElement(paraHidden);
+
+        By inputLocator = By.tagName("input");
+        WebElement input = driver.findElement(inputLocator);
+        input.sendKeys("Pierwszy");
+        List<WebElement> inputs = driver.findElements(inputLocator);
+        System.out.println(inputs.size());
+
+
+    }
+}
