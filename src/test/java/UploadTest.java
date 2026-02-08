@@ -13,6 +13,7 @@ public class UploadTest {
         WebDriver driver = new ChromeDriver();
         driver.get("https://testeroprogramowania.github.io/selenium/fileupload.html");
         driver.findElement(By.id("myFile")).sendKeys("/Users/dawidjuraszek/Desktop/conduit .xml");
+
     }
 
 
