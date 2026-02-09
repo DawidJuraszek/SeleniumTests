@@ -4,6 +4,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -22,7 +23,6 @@ public class UploadTest {
         driver.findElement(By.id("myFile")).sendKeys("/Users/dawidjuraszek/Desktop/conduit .xml");
         File after = screenshot.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(after,new File("src/test/resources/afterUpload.png"));
-
 
     }
 
